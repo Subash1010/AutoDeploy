@@ -5,7 +5,7 @@ exports.handler = (event, context, callback) => {
     var sourceBucket = "i2i.input";
     var destinationBucket = "i2i.output";
     var objectKey = event.Records[0].s3.object.key;
-
+    console.log("Hi");
     s3.getObject({
         Bucket: sourceBucket,
         Key: objectKey
